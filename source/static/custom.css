@@ -1,0 +1,6 @@
+@font-face{
+    font-family:"PottaOne";
+    font-display:fallback;
+    src:url(fonts/PottaOne-Regular.ttf) format("woff2");
+    font-weight:600
+}

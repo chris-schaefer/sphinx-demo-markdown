@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - pip install -U sphinx==1.8.4
+      - pip install -U recommonmark
+  build:
+    commands:
+      - make html
+      - aws s3 sync --delete ./build/html "s3://????"
+      - aws cloudfront create-invalidation --distribution-id ???? --path "/*"
